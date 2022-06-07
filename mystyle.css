@@ -118,7 +118,16 @@ button {
     margin-right:auto;
 }
 
-.login-form label {
+.login-form h2 {
     font-weight: bold;
     margin-bottom:1rem;
+}
+
+.input-error {
+    border:1px solid red;
+}
+
+nav span a {
+    margin:0 0.3rem;
+    text-decoration: none;
 }

@@ -9,18 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="site-register">
-        <div class="container text-center">
-            <h1>My Awesome User Registration System</h1>
-            <nav>
-                <a href="index.html" type="button" class="btn btn-primary">Home</a>
-                <a href="register.html" type="button" class="btn btn-success">Register</a>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Awesome User Registration System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <span class="navbar-text text-end">
+              <a href="index.html">Home</a>
+              <a href="register.html">Register</a>
+              <a href="users.html">Users</a>
+            </span>
+          </div>
         </div>
-    </header>
+      </nav>
     <main>
-        <div class="container card col-5 login-form">
-            <label>Login</label>
+        <div class="container card col-4 login-form">
+            <h2 class="text-center">Login</h2>
             <div class="login-container">
                 <div class="mb-3">
                     <input type="text" class="form-control" id="txtUserName" placeholder="Enter your username">
