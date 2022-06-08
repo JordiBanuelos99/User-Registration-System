@@ -54,10 +54,17 @@
                         <input type="text" id="txtPhone" class="form-control" placeholder="Enter your phone number">
                     </div>
                     <div class="mb-3 col-md-6">
-                        <input type="text" id="txtPayment" class="form-control" placeholder="Enter your payment method">
+                        <select class="form-select" id="txtPayment">
+                            <option value="default" disabled selected>-- Select the payment method --</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Credit card">Credit Card</option>
+                            <option value="Debit card">Debit Card</option>
+                            <option value="Paypal">Paypal</option>
+                        </select>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <input type="text" id="txtColor" class="form-control" placeholder="Select a color">
+                        <label>Favorite Color: </label>
+                        <input type="color" id="txtColor">
                     </div>
                 </div>      
                 <div class="mybutton text-center">
