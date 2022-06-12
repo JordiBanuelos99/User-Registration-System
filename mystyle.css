@@ -85,6 +85,19 @@ button {
     color:black;
 }
 */
+
+#b_index {
+    background-image: url("img/WP_F.jpg");
+    background-size: cover;
+}
+
+#b_register {
+    background-image: url("img/WP_M.jpg");
+    background-size: cover;
+}
+#b_users {
+    background-color: rgb(13, 24, 61);
+}
 .site-init{
     background-color: black;
     padding:2rem 0;
@@ -99,6 +112,8 @@ button {
 .form-container{
     padding:2rem;
     margin:2%;
+    width:45%;
+    margin-left: auto;
 }
 
 .form-container h2{
@@ -115,7 +130,7 @@ button {
     padding:2rem;
     margin:2%;
     margin-left:auto;
-    margin-right:auto;
+    height: 30rem;
 }
 
 .login-form h2 {
@@ -130,4 +145,25 @@ button {
 nav span a {
     margin:0 0.3rem;
     text-decoration: none;
+}
+
+.alert-error {
+    border: 1px solid rgb(126, 0, 0);
+    color: rgb(126, 0, 0);
+    background-color: rgb(214, 35, 125);
+}
+
+.hide {
+    display: none;
+}
+
+.table_card {
+    border-radius: 10px;
+    width:90%;
+    margin: 2% auto;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.table_border {
+    border: 1px solid rgb(109, 109, 109);
 }

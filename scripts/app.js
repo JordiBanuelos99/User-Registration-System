@@ -18,9 +18,9 @@ function isValid(user){
         console.log("Please add an Email");
         $("#txtEmail").addClass("input-error");
     }
-    if(user.password.length==0){
+    if(user.password.length<6){
         valid=false;
-        console.log("Please add a password");
+        console.log("Please create a password with 6 or more characters");
         $("#txtPassword").addClass("input-error");
     }
     if(user.firstname.length==0){
@@ -60,6 +60,26 @@ function isValid(user){
     }
     return valid;
 }
+function validatePass(){
+    console.log("Validating pass");
+        //get the value of the pass
+    let txtPass = $("#txtPassword");
+    let password = txtPass.val();
+    if(password.length<6){ //Is the password less than 6 characters?
+        txtPass.css("background","#ff9898"); //JQuery changes the css
+        displayError("The password is too short");
+    }else{
+        txtPass.css("background","green");
+        //jquery changes the css
+        hideError();
+    }
+}
+function displayError(msg){
+    $("#alertError").removeClass("hide").text(msg);
+}
+function hideError(){
+    $("#alertError").addClass("hide");
+}
 //register function
 function register(){
     let userName = $("#txtEmail").val();
@@ -76,6 +96,8 @@ function register(){
     if (isValid(newUser)==true){
         saveUser(newUser); //thin fn is in the StoreManager
         $("input").val(""); //Clear form
+    }else{
+        displayError("Please complete all the fields");
     }
 }
 function init(){
@@ -127,6 +149,7 @@ function init(){
             register();
         }
     });
+    $("#txtPassword").keyup(validatePass); //It is executed every time the key is up
 }
 
 window.onload=init();
